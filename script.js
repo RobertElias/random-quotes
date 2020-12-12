@@ -4,7 +4,7 @@ const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
 const newQuoteBtn = document.getElementById('new-quote');
 const loader = document.getElementById('loader');
-
+const linkedBtn = document.getElementById('linkedin');
 
 let apiQuotes = [];
 //Show Loading
@@ -71,11 +71,18 @@ function tweetQuote() {
     const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
     window.open(twitterUrl, '_blank')
 }
+// Post quote linkedin
+// find url
+function linkQuote(){
+    const linkedinUrl = `https://www.linkedin.com/feed?text=${quoteText.textContent} - ${authorText.textContent}`;
+    window.open(linkedinUrl, '_blank')
+
+}
 
 //Event Listeners
 newQuoteBtn.addEventListener('click', newQuote)
 twitterBtn.addEventListener('click', tweetQuote)
-
+linkedBtn.addEventListener('click', linkQuote )
 //On Load
 getQuotes();
 //newQuote();
