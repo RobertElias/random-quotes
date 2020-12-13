@@ -74,7 +74,7 @@ function tweetQuote() {
 // Post quote linkedin
 // find url
 function linkQuote(){
-    const linkedinUrl = `https://www.linkedin.com/feed?text=${quoteText.textContent} - ${authorText.textContent}`;
+    const linkedinUrl = `https://www.linkedin.com/feed?Startapost=${quoteText.textContent} - ${authorText.textContent}`;
     window.open(linkedinUrl, '_blank')
 
 }
